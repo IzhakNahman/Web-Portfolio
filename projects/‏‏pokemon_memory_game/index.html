@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="icon" href="images\icon.png">
+    <!--  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="script\myScript.js"></script>
+    <link href="style/myStyle.css" rel="stylesheet" />
+
+    <title>משחק הזיכרון</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body class="text-center">
+
+    <div class="container">
+        <div class="row row-margin no-margin-top">
+            <div class="col-md-1 ">
+                <div><img id="userLogoTop" class="top-logo" src="" /></div>
+            </div>
+            <div class="col-md-3 text-right">
+                <div id="userNameTop" class="margin-user"></div>
+            </div>
+            <div class="offset-md-6 ">
+                <div id="userNameTop" class="margin-user"></div>
+            </div>
+            <div class="col-md-2 ">
+                <div id="userNameTop" class="margin-user"></div>
+                <button id="logOut" class="btn btn-primary">התנתק</button>
+            </div>
+
+        </div>
+        <div class="row row-margin no-margin-top">
+            <div class="col-md-12">
+                <h1 class="h3"> משחק הזיכרון פוקימון <img class="icon-images" src="images\pokicon.png"></h1>
+            </div>
+        </div>
+        <div class="row row-margin">
+            <div class="col-md-2">
+                <div id="rightMenu" class="text-rigt">
+                    <button id="showTable" class="btn btn-success">התוצאות שלי</button>
+                    <div id="myTable">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">רמה</th>
+                                    <th scope="col">מהלכים</th>
+                                    <th scope="col">יעד</th>
+                                    <th scope="col">תאריך</th>
+                                </tr>
+                            </thead>
+                            <tbody id="myTbody">
+
+
+
+                            </tbody>
+                        </table>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="offset-md-6">
+
+            </div>
+            <div class="col-md-2">
+                <p id="rank">רמה: </p>
+
+
+            </div>
+            <div class="col-md-2">
+
+                <p id="steps">מהלכים: </p>
+            </div>
+
+        </div>
+
+        <div id="welcome" class=".d-none">
+            <div class="row row-margin">
+                <div class="col-md-12 text-center">
+                    <div class="h4" id="welcomeFade"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="logIn">
+            <div class="row row-margin">
+                <div class="offset-md-3">
+
+                </div>
+                <div class="col-md-3 text-right">
+                    <label class="h5 ">הקלד שם משתמש:</label>
+                </div>
+                <div class="col-md-3">
+                    <input id="userName" value="" />
+                </div>
+                <div class="col-med-2">
+                    <div class="text-danger" id="errorUser"></div>
+                </div>
+
+            </div>
+            <div class="row row-margin">
+                <div class="offset-md-3">
+
+                </div>
+                <div class="col-md-3 text-right">
+                    <label class="h5 ">הקלד סיסמה:</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="password" id="userPass" value="" />
+                </div>
+                <div class="col-med-2">
+                    <div class="text-danger" id="errorPass"></div>
+                </div>
+
+            </div>
+            <div class="row row-margin">
+                <div class="offset-md-3">
+
+                </div>
+                <div class="col-md-3 text-right">
+                    <label class="h5 ">בחר פוקימון אהוב:</label>
+                </div>
+                <div class="col-md-3">
+                    <button id="chooseLogo" class="btn btn-success">לחץ
+                        לבחירה</button>
+
+                    <div id="pokemonLogos">
+                        <div><img id="logoCard1" class="logos logoCards" src="images/card1.png" /></div>
+                        <div><img id="logoCard2" class="logos logoCards" src="images/card2.png" /></div>
+                        <div><img id="logoCard3" class="logos logoCards" src="images/card3.png" /></div><br />
+                        <div><img id="logoCard4" class="logos logoCards" src="images/card4.png" /></div>
+                        <div><img id="logoCard5" class="logos logoCards" src="images/card5.png" /></div>
+                        <div><img id="logoCard6" class="logos logoCards" src="images/card6.png" /></div><br />
+                        <div><img id="logoCard7" class="logos logoCards" src="images/card7.png" /></div>
+                        <div><img id="logoCard8" class="logos logoCards" src="images/card8.png" /></div>
+                        <div><img id="logoCard9" class="logos logoCards" src="images/card9.png" /></div>
+                    </div>
+                </div>
+                <div class="col-med-2">
+                    <div class="text-danger" id="errorLogo"></div>
+                </div>
+            </div>
+            <div class="row row-margin">
+                <div class="offset-md-3">
+
+                </div>
+                <div class="col-md-1 text-right">
+                    <button id="sendData" class="btn btn-primary">הירשם</button>
+                </div>
+                <div class="col-md-1 text-right">
+                    <button id="sendDataLogIn" class="btn btn-primary">התחבר</button>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <div id="rankChoose" class="row row-margin text-center">
+            <div class="offset-md-3">
+
+            </div>
+            <div class="col-md-6 text-center">
+
+                <ul id="rankTable" class="list-group">
+                    <li class="list-group-item">
+                        <h2 class="h5"> בחר רמת קושי:</h2>
+                    </li>
+
+                    <li id="rank1" class="ranks list-group-item list-group-item-success btn">רמה 1 - 6 קלפים</li>
+                    <li id="rank2" class="ranks list-group-item list-group-item-warning btn">רמה 2 - 12 קלפים </li>
+                    <li id="rank3" class="ranks list-group-item list-group-item-danger btn">רמה 3 - 18 קלפים</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="winDiv">
+            <div class="row row-margin">
+                <div class="col-md-12 text-center">
+
+                    <div class="h3 text-success">ניצחת!</div>
+                    <div id="stepsWon" class="h5"></div>
+                    <button id="give-me-margin" class="btn btn-primary" onclick="refresh()">לחץ למשחק נוסף</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="gameBoard">
+            <div class="row row-margin">
+                <div class="col-md-12">
+                    <div id="myCards">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

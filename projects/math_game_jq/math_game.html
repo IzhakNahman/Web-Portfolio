@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <script src="script\myScript.js"></script>
+
+
+    <script>
+
+    </script>
+    <style>
+        body{
+                line-height:0.7;
+            }
+            .my-row {
+                padding: 10px;
+                margin-top:10px;
+            }
+        
+            p {
+                font-size: 18px;
+                font-weight: bold;
+        
+            }
+        
+            button {
+                margin-right: 5px;
+                margin-left: 5px;
+                width: 80px;
+                height: 40px;
+            }
+        
+            .my-methods{
+                margin-right:10px;
+                font-size:34px;
+                display: inline-block;
+                font-weight: bold;
+             
+            }
+            .my-methods-big{
+                margin-right:10px;
+                font-size:36px;
+                display: inline-block;
+                font-weight: bold;
+            
+        
+            }
+        
+            .new-row{
+                border:1px solid gray;
+            }
+            input[type="number"]{
+                width:160px;
+                height:50px;
+                font-size:28px;
+                text-align: center;
+            }
+            span, #counterSec{
+                font-size:32px;
+                margin-left:10px;
+            }
+            .padding-class{
+                padding-top:50px;
+                padding-bottom: 50px;
+                
+            }
+            input[type=checkbox]{
+                width:30px;
+                height:30px;
+                display:inline-block;
+            }
+            .show-button{
+                height:25px;
+                width:60px;
+                margin-right: 0;
+                font-size: 13px;
+                padding:0;
+
+            }
+            .show-button-big{
+                height:25px;
+                width:80px;
+                margin-right: 0;
+                font-size: 13px;
+                padding:0;
+            }
+            #showButtonFirst{
+                display:none;
+            }
+
+
+            .show-buttons{
+                padding:2px;
+                
+            }
+            .big-size{
+                font-size:20px;
+                margin-top:13px;
+                vertical-align: middle; 
+            }
+            .mid-div{
+                font-size:20px;
+                margin-top:11px;
+                vertical-align: middle;  
+            }
+            #imgRelated{
+                top:100%;
+                margin-top: 5px;
+                padding: 10px;
+                position: absolute;
+                background-color:white;
+                margin-left:-150px;
+                display:none;
+                z-index: 999;
+                border:2px solid black;
+                box-shadow: 3px 3px 3px 3px #ccc;
+                text-decoration: underline;
+        
+        
+            }
+
+            table,tr,td,th{
+                direction:rtl;
+                border-top:1px solid black;
+                border-bottom:1px solid black;
+            }
+
+           
+
+            .background-blue-class{
+
+                color: #fff;
+                background-color: #007bff;
+                border-color: #007bff;
+                text-align: center;
+                vertical-align: middle;
+                padding: .375rem .75rem;
+                line-height: 1.5;
+                border-radius: .25rem;
+            }
+
+            .text-design{
+                color:black;
+                font-size:20px;
+            }
+          
+            #first{
+                background-size: cover;
+                height:30px;width:260px;position:absolute;
+                margin-top:11px;
+
+            }
+            
+            #second{
+                
+                background-size: cover;height:50px;width:50px;position:absolute;
+                margin-top:-12px;
+
+            }
+
+            table tbody tr:hover{
+               
+                color: darkgray;
+            
+            }
+
+            .big-start{
+                width:150px;
+                height:60px;
+                font-size: 20px;
+            }   
+
+        </style>
+</head>
+
+
+<body class="text-white">
+
+    <div class="container new-row bg-secondary">
+        <div class="row my-row text-center ">
+            <div class="col-md-12 ">
+                <h1 class=" h2 text-center background-blue-class">משחק לתרגול חשבון</h1>
+            </div>
+
+        </div>
+
+        <div class="new-row bg-dark rounded">
+            <div class="row show-buttons ">
+                <div class="col-md-1 offset-md-10 " id="" class="">
+                    <button id="showTable" class="btn btn-info show-button-big">לוח הכפל</button>
+                    <div id="imgRelated">
+                        <p class="text-center text-dark">לוח הכפל</p>
+                        <img src="images\table.png" />
+                    </div>
+
+                </div>
+                <div class="col-md-1" id="showHideButtons" class="">
+                    <button class="btn btn-info show-button" id="hideButtonFirst">הסתר</button>
+
+                </div>
+            </div>
+            <div id="firstMenu">
+                <div class="row my-row text-center">
+                    <div class="col-md-4 offset-md-2">
+                        <p class="background-blue-class">:בחר טווח מספרים<p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="background-blue-class">:בחר פעולות חשבון<p>
+                    </div>
+                </div>
+                <div class="row my-row text-center">
+                    <div class="col-md-4 offset-md-2">
+                        <div id="chooseNumbers">
+                            <button class="btn btn-info" id="ten" onclick="chooseMaxNum(10, this,hundred, thousand )">1-10</button>
+                            <button class="btn btn-info" id="hundred" onclick="chooseMaxNum(20, this, thousand, ten)">1-20</button>
+                            <button class="btn btn-info" id="thousand" onclick="chooseMaxNum(100, this, hundred, ten)">1-100</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="chooseMethods">
+                            <div class="my-methods ">
+                                <label id="xMethLB" class="" for="xMeth">x</label>
+                                <input onclick="addMethToArray(this, $('xMethLB'))" value="x" type="checkbox" class="align-middle"
+                                    id="xMeth">
+
+                            </div>
+                            <div class="my-methods">
+                                <label id="dMethLB" class="" for="dMeth">/</label>
+                                <input onclick="addMethToArray(this, $('dMethLB'))" value="/" type="checkbox" class="align-middle"
+                                    id="dMeth">
+
+                            </div>
+                            <div class="my-methods-big">
+                                <label id="pMethLB" class="" for="pMeth">+</label>
+                                <input onclick="addMethToArray(this, $('pMethLB'))" value="+" type="checkbox" class="align-middle"
+                                    id="pMeth" checked="true">
+
+                            </div>
+                            <div class="my-methods-big">
+                                <label id="mMethLB" class="" for="mMeth">-</label>
+                                <input onclick="addMethToArray(this)" value="-" type="checkbox" class="align-middle" id="mMeth">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row my-row text-center">
+
+        </div>
+        <div class="new-row bg-dark rounded">
+            <div class="row my-row text-center">
+
+                <div class="col-md-12">
+                    <button class="big-start btn btn-info" id="startEx" onclick="startMath(0)"> התחל </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="row my-row text-center">
+
+        </div>
+        <div class="new-row bg-dark rounded">
+            <div class="row my-row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <p class="background-blue-class">:תרגיל<p>
+                </div>
+
+                <div class="col-md-2 text-right offset-md-2">
+                    <div id="textWinLose" class="big-size"></div>
+
+                </div>
+                <div class="col-md-4">
+                    <label id="myEx"><span id="firstNumberE">?</span><span id="methodE">#</span><span id="secondNumberE">?</span><span>=</span></label>
+                    <input type="number" id="result" value="" />
+                </div>
+
+                <div class="col-md-3 text-left">
+                    <div id="first"></div>
+                    <div id="second"></div>
+                </div>
+                <div class="col-md-1 text-center">
+                    <div id="counterSec" class="mid-div"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row my-row text-center">
+
+        </div>
+        <div class="new-row bg-dark rounded">
+            <div class="row my-row text-center">
+                <div class="col-md-2 offset-md-3 text-center">
+                    <button class="btn btn-info" onclick="refresh()"> רענן </button>
+                </div>
+                <div class="col-md-2 text-center">
+                    <button class="btn btn-info" id="jumpEx" onclick="startMath(1)" disabled="true"> דלג </button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-info" id="checkEx" onclick="check()" disabled="true"> בדוק </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="row my-row text-center">
+
+        </div>
+        <div class="new-row bg-dark rounded">
+            <div class="row show-buttons">
+                <div class="col-md-1 offset-md-11" id="showHideButtons2" class="">
+                    <button class="btn btn-info show-button" id="showButtonSecond">הסתר</button>
+                </div>
+            </div>
+            <div id="secondMenu">
+                <div class="row my-row text-center padding-class">
+                    <div class="col-md-8 offset-md-2 ">
+                        <table class="table bg-light text-body">
+                            <thead class="thead-dark bg-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">תרגיל</th>
+                                    <th scope="col">פעולה</th>
+                                    <th scope="col">תשובה</th>
+                                    <th scope="col">תשובה נכונה</th>
+                                    <th scope="col">נכון/לא נכון</th>
+                                    <th scope="col">בונוס זמן</th>
+                                    <th scope="col">ניקוד</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tBody" class="text-design">
+                                <!--<tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>סה"כ</td>
+                                    <td id="sumPoints"></td>
+                                </tr>
+
+                                -->
+
+                            </tbody>
+                            <tfoot>
+                                <tr class="table-dark font-weight-bold text-design">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>סה"כ</td>
+                                    <td id="sumPoints"></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="col-md-8 offset-md-2">
+                <div id="calculator"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+
+
+
+
+</body>
+
+
+</html>

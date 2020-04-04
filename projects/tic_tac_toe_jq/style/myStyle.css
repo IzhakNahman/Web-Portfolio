@@ -1,0 +1,118 @@
+
+#gameBody {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid black;
+    padding: 25px;
+    display: inline-block;
+    width: 450px;
+
+}
+.man-or-comp {
+    margin: 2.5px;
+    width: 80px;
+    padding: 2px;
+}
+
+.comp-level {
+    
+    width: 80px;
+    padding: 2px;
+    margin: 2.5px;
+}
+
+.button-choose {
+    margin: 2.5px;
+    padding: 2px;
+    width: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button-start {
+    margin: 2.5px;
+    padding: 2px;
+    width: 80px;
+    font-size: 18px;
+}
+
+.button-restart {
+    margin: 2.5px;
+    padding: 2px;
+    width: 75px;
+}
+
+
+
+
+.box {
+    display: inline-block;
+    margin: 3px;
+    width: 90px;
+    height: 90px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+
+.player-score {
+    display: inline-block;
+    padding: 2.5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 21px;
+    font-family: inherit;
+}
+
+
+
+#bigBox {
+
+    visibility: hidden;
+    margin-bottom: 25px;
+
+}
+
+.border-black {
+    background-color: black;
+    padding: 0px;
+    display: inline-block;
+    border: 3px solid white;
+}
+
+h1 {
+
+    margin-bottom: 12.5px;
+    font-family: inherit;
+    font-size: 40px;
+
+}
+
+#startGame {
+    margin-top: 25px;
+    display: none;
+}
+
+#restartGame {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: none;
+}
+
+#players-section {
+    margin-bottom: 50px;
+}
+
+#chooseXO {
+    display: none;
+}
+
+#chooseLevel {
+    display: none;
+}
+
+
+
+body {
+    background-color: black;
+}

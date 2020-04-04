@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="icon" href="images\icon.png">
+    <link href="style/myStyle.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="script\myScript.js"></script>
+
+</head>
+<script>
+  
+</script>
+<style>
+  
+</style>
+
+
+<body class="text-center">
+    <div id="gameBody" class="bg-dark text-white">
+        <h1 class="border-bottom border-secondary ">Tic-Tac-Toe</h1>
+        <div id="humanComputer">
+            <h2 class="h6"> Choose VS: </h2>
+            <button  id="human" class=" btn btn-primary man-or-comp">Human</button>
+            <button  id="comp" class=" btn btn-primary man-or-comp">Robot</button>
+        </div>
+
+        <div id="chooseLevel">
+            <h2 class="h6"> Choose robot level: </h2>
+            <button  id="Beginner" class="comp-level btn btn-success">Beginner</button>
+            <button  id="Semi-Pro" class="comp-level btn btn-warning">Semi-Pro</button>
+            <button  id="Legend" class="comp-level btn btn-danger">Legend</button>
+        </div>
+
+        <div id="chooseXO">
+            <h2 class="h6"> Choose: </h2>
+            <button  id="oChoosed" class="button-choose btn btn-primary text-danger">O</button>
+            <button  id="xChoosed" class="button-choose btn btn-primary text-dark">X</button>
+        </div>
+
+        <div id="startGame">
+            <button onclick="startTheGame()" class="button-start btn btn-primary">Start</button>
+        </div>
+
+        <div id="restartGame">
+            <button onclick="restartTheGame()" class="button-restart btn btn-primary">restart</button>
+            <button onclick="finishGame()" class="button-restart btn btn-primary">finish</button>
+        </div>
+
+
+        <div id="bigBox">
+            <div id="playerTurnNew" class="h6"> player turn: </div>
+            <div class="">
+                <button onclick="addXO('box1')" class="box btn btn-secondary text-body" id="box1">&nbsp</button>
+                <button onclick="addXO('box2')" class="box btn btn-secondary text-body" id="box2">&nbsp</button>
+                <button onclick="addXO('box3')" class="box btn btn-secondary text-body" id="box3">&nbsp</button><br />
+
+                <button onclick="addXO('box4')" class="box btn btn-secondary text-body" id="box4">&nbsp</button>
+                <button onclick="addXO('box5')" class="box btn btn-secondary text-body" id="box5">&nbsp</button>
+                <button onclick="addXO('box6')" class="box btn btn-secondary text-body" id="box6">&nbsp</button><br />
+
+                <button onclick="addXO('box7')" class="box btn btn-secondary text-body" id="box7">&nbsp</button>
+                <button onclick="addXO('box8')" class="box btn btn-secondary text-body" id="box8">&nbsp</button>
+                <button onclick="addXO('box9')" class="box btn btn-secondary text-body" id="box9">&nbsp</button>
+            </div>
+
+        </div>
+
+        <div id="players-section" class=" h6 font-weight-bold">
+            <p class="player-score" id="player1Score"></p><br/>
+            <p class="player-score" id="player2Score"></p><br/>
+            <p class="player-score text-primary" id="gamesCounter"></p>
+        </div>
+
+    </div>
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">HELLO</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="whoWin" class="modal-body text-success font-weight-bold text-left h5">
+
+                </div>
+                <div class="modal-footer">
+                    <button onclick="finishGame()" type="button" class="btn btn-success">finish game</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button onclick="restartTheGame()" type="button" class="btn btn-secondary">Restart</button>
+                    <button onclick="playAgain()" type="button" class="btn btn-primary">Play again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="finishModal" tabindex="-1" role="dialog" aria-labelledby="finishModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Game Finished</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="endGame" class="modal-body text-success font-weight-bold text-left h5">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button onclick="restartTheGame()" type="button" class="btn btn-secondary">Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+
+</html>

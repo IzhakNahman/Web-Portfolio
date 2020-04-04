@@ -1,0 +1,94 @@
+	.header-images{
+		
+		width:20%;
+		height:300px;
+		
+	}
+	.nav-style{
+		border:2px solid black;
+		box-sizing: border-box;
+	}
+	.logo-size{
+		width:50px;
+		height:40px;
+		vertical-align:middle
+	}
+	.card-size{
+		width: 16rem;
+		
+	}
+	.some-space{
+		height:50px;
+	}
+							
+	.main-image{
+		width:252px;
+		height:100px;
+		
+	}
+	.position-middle{
+		margin-left:40%;
+		
+	}
+	.black-bg{
+		background:black;
+	}
+	footer p{
+		padding:5px;
+		padding-top:15px;
+	}
+	.dropdown-menu{
+		display:none;
+		width:200px;
+		
+	}
+	.dropdown:hover>.dropdown-menu {
+		display: block;
+		
+	}
+	
+	
+	
+	.dropdown-item{
+		padding-left:1.5rem;
+		 transition: padding-left 1s;
+	}
+	
+	.dropdown-item:hover{
+		padding-left:2rem;
+		transition: padding-left 1s, border-bottom 1s;
+	}
+	
+	.underline-red{
+		padding-bottom:3px;
+		margin-bottom:30px;
+		margin-bottom:30px;
+		border-bottom:2px solid white;
+		transition:border-bottom 2s; 
+		
+		
+	}
+	.dropdown-item:hover .underline-red{
+		padding-bottom:3px;
+		border-bottom:2px solid red;
+		font-weight:bold;
+		transition:border-bottom 1.5s; 
+		
+		
+	}
+	.big-height{
+		height:650px;
+	}
+	
+	.btn-primary{
+		margin-top:25px;
+		width:200px;
+		margin-left:30%;
+		
+	}
+
+	
+	
+	
+	
+	

@@ -1,0 +1,417 @@
+body {
+    direction: rtl;
+    background-color: black;
+}
+
+.row-margin {
+    margin-top: 30px;
+}
+
+
+.container {
+    width: 880px;
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+p {
+    display: inline-block
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+.list-group-item-primary:hover {
+    color: #b8daff;
+    background-color: #004085;
+}
+
+.list-group-item-success:hover {
+    color: #c3e6cb;
+    background-color: #155724;
+}
+
+.list-group-item-warning:hover {
+    color: #ffeeba;
+    background-color: #856404;
+}
+
+.list-group-item-danger:hover {
+    color: #f5c6cb;
+    background-color: #721c24;
+}
+
+p {
+    vertical-align: middle;
+    padding: 5px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.btn-primary,
+.btn-success {
+    padding: 5px;
+
+}
+
+.myCard {
+    display: inline-block;
+
+    width: 132px;
+    height: 155px;
+    margin: 3px;
+    border: 1px solid black;
+    border-radius: .25rem !important;
+    perspective: 1000px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+
+}
+
+
+.myCard-med {
+    display: inline-block;
+    width: 143px;
+    height: 165px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: .25rem !important;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+
+}
+
+.myCard-big {
+    display: inline-block;
+    width: 148px;
+    height: 163px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: .25rem !important;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+
+
+}
+
+.myCard-big.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.myCard.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.myCard-med.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+
+.front {
+    position: absolute;
+    background-image: url("../images/card0.png");
+    background-size: cover, contain;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    text-align: center;
+    backface-visibility: hidden;
+
+
+}
+
+
+.back {
+    position: absolute;
+    background-size: cover, contain;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+
+}
+
+#myCards {
+    display: inline-block;
+}
+
+.icon-images {
+    width: 50px;
+}
+
+#give-me-margin {
+    margin-top: 30px;
+}
+
+
+#pokemonLogos {
+    top: 100%;
+    width: 220px;
+    margin-top: 5px;
+    margin-right: -10px;
+    padding: 10px;
+    position: absolute;
+    background-color: white;
+    z-index: 999;
+    border: 2px solid black;
+    display: none;
+
+
+}
+
+#myTable {
+    top: 100%;
+    width: 300px;
+    margin-top: -10px;
+    margin-right: -10px;
+    padding: 10px;
+    position: absolute;
+    background-color: white;
+    z-index: 999;
+    border: 2px solid black;
+
+
+}
+
+.logos {
+    width: 50px;
+}
+
+#pokemonLogos div {
+
+    display: inline-block;
+    margin: 5px;
+}
+
+.logoCards:hover {
+    border: 2px solid red;
+    opacity: 0.5;
+
+}
+
+.border-red {
+    border: 2px solid red;
+    opacity: 0.5;
+}
+
+#chooseLogo {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+.top-logo {
+    width: 40px;
+}
+
+.margin-user {
+    margin-top: 10px;
+}
+
+#myTable {
+    display: none;
+}
+
+#myTbody {
+    text-decoration: none;
+}
+
+.tr-hover:hover {
+    color: red;
+    background-color: black;
+}
+
+.myCard {
+    display: inline-block;
+
+    width: 132px;
+    height: 155px;
+    margin: 3px;
+    border: 1px solid black;
+    border-radius: .25rem !important;
+    perspective: 1000px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+
+}
+
+
+.myCard-med {
+    display: inline-block;
+    width: 143px;
+    height: 165px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: .25rem !important;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+
+}
+
+.myCard-big {
+    display: inline-block;
+    width: 148px;
+    height: 163px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: .25rem !important;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+
+
+}
+
+.myCard-big.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.myCard.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.myCard-med.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+
+.front {
+    position: absolute;
+    background-image: url("../images/card0.png");
+    background-size: cover, contain;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    text-align: center;
+    backface-visibility: hidden;
+
+
+}
+
+
+.back {
+    position: absolute;
+    background-size: cover, contain;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+
+}
+
+#myCards {
+    display: inline-block;
+}
+
+.icon-images {
+    width: 50px;
+}
+
+#give-me-margin {
+    margin-top: 30px;
+}
+
+
+#pokemonLogos {
+    top: 100%;
+    width: 220px;
+    margin-top: 5px;
+    margin-right: -10px;
+    padding: 10px;
+    position: absolute;
+    background-color: white;
+    z-index: 999;
+    border: 2px solid black;
+    display: none;
+
+
+}
+
+#myTable {
+    top: 100%;
+    width: 300px;
+    margin-top: -10px;
+    margin-right: -10px;
+    padding: 10px;
+    position: absolute;
+    background-color: white;
+    z-index: 999;
+    border: 2px solid black;
+
+
+}
+
+.logos {
+    width: 50px;
+}
+
+#pokemonLogos div {
+
+    display: inline-block;
+    margin: 5px;
+}
+
+.logoCards:hover {
+    border: 2px solid red;
+    opacity: 0.5;
+
+}
+
+.border-red {
+    border: 2px solid red;
+    opacity: 0.5;
+}
+
+#chooseLogo {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+.top-logo {
+    width: 40px;
+}
+
+.margin-user {
+    margin-top: 10px;
+}
+
+#myTable {
+    display: none;
+}
+
+#myTbody {
+    text-decoration: none;
+}
+
+.tr-hover:hover {
+    color: red;
+    background-color: black;
+}

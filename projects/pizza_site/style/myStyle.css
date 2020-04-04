@@ -1,0 +1,151 @@
+	.header-images{
+		
+		width:20%;
+		height:300px;
+		
+	}
+
+	.logo-size{
+		width:60px;
+		height:50px;
+		vertical-align:middle
+		
+	}
+
+	.some-space{
+		height:50px;
+	}
+	
+	
+	.dropdown-menu{
+		display:none;
+		width:200px;
+		
+		
+	}
+	.dropdown:hover>.dropdown-menu {
+		display: block;
+		
+	}
+	
+	
+	
+	.dropdown-item{
+		padding-left:1.5rem;
+		 transition: padding-left 1s;
+		 	
+	}
+	
+	.dropdown-item:hover{
+		padding-left:2rem;
+		transition: padding-left 1s, border-bottom 1s;
+	}
+	
+	.underline-red{
+		padding-bottom:3px;
+		margin-bottom:30px;
+		margin-bottom:30px;
+		border-bottom:2px solid white;
+		transition:border-bottom 2s; 
+	
+		
+		
+	}
+	.dropdown-item:hover .underline-red{
+		padding-bottom:3px;
+		border-bottom:2px solid red;
+		font-weight:bold;
+		transition:border-bottom 1.5s; 
+		
+		
+	}
+	body{
+		background-image: url(../images/Pizza_Background.jpg);
+		background-size: 100% 100%;
+		background-attachment: fixed;
+	}
+	#logIn{
+		margin:10px;
+		vertical-align: middle;
+	}
+	#headerText{
+		display:inline-block;
+		vertical-align:middle;
+		font-size:30px;
+		margin-right:180px;
+		margin-top:8px;
+		color:#ff3333;
+		font-weight:bold;
+		font-family:Verdana;
+	}
+	img{
+		vertical-align:middle;
+		width:
+	}
+	.nav-style{
+		padding-top:1px;
+		
+	}
+	
+	.container{
+		background-color:rgba(0, 0, 0, 0.6);
+	}
+	
+
+	h1, h2, h3{
+		
+		padding:50px;
+		color:white;
+	}
+	.border-me-bottom{
+		
+		border-bottom:1px solid white;
+	}
+	.input-size{
+		width:300px;
+		margin:auto auto;
+	}
+	
+	footer p{
+		padding-top:20px;
+		padding-bottom:10px;
+	}
+	input[type="radio"]{
+		margin-right:20px;
+	}
+	#form2{
+		display:none;
+	}
+	#form3{
+		display:none;
+	}
+	
+	@keyframes myfirst {
+			  0%  {content:url("../images/1.png");}
+			  50%  {content:url("../images/2.png");}
+			  100%  {content:url("../images/3.png");}
+
+	
+	}
+			
+	.changeImage{
+				margin:20% 20%;
+				width:150px;
+				height:150px;
+				animation: myfirst 5s  infinite alternate;
+	}
+	
+	.left-image{
+				margin:20% 20%;
+				width:170px;
+				height:125px;
+	}
+
+
+
+
+	
+	
+	
+	
+	
