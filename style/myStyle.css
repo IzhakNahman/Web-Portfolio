@@ -37,13 +37,6 @@ html {
     background-attachment: fixed;
 }
 
-#bigContainer2 {
-    font-family: 'Lato', sans-serif;
-    background-image: url("../images/home2.JPG");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
 
 .img-gallery {
     padding: 5px;
